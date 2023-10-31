@@ -56,3 +56,20 @@ function ejercicio2() {
 }
 let punto2 = document.getElementById("btnPunto2");
 punto2.addEventListener("click", ejercicio2);
+
+function ejercicio3() {
+  let mensajePunto3 = document.getElementById("mensajePunto3");
+  let textoCompleto = "";
+
+  do {
+    let texto = prompt("Ingrese el texto: ");
+    textoCompleto += texto + " - ";
+    continuar = confirm("¿Desea Ingresar algo mas?");
+  } while (continuar);
+
+  textoCompleto = textoCompleto.slice(0, -3);
+  textoCompleto += ".";
+  mensajePunto3.textContent = `${textoCompleto}`;
+}
+let punto3 = document.getElementById("btnPunto3");
+punto3.addEventListener("click", ejercicio3);
