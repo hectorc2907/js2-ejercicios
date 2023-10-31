@@ -22,3 +22,37 @@ function ejercicio1() {
 }
 let punto1 = document.getElementById("btnPunto1");
 punto1.addEventListener("click", ejercicio1);
+
+function ejercicio2() {
+  let mensajePunto2 = document.getElementById("mensajePunto2");
+  let calificacion = parseInt(prompt("Ingrese la calificación: "));
+
+  switch (true) {
+    case calificacion === 0 || calificacion === 1 || calificacion === 2:
+      alert("Muy deficiente");
+      break;
+    case calificacion === 3 || calificacion === 4:
+      alert("Insuficiente");
+      break;
+    case calificacion === 5 || calificacion === 6:
+      alert("Suficiente");
+      break;
+    case calificacion === 7:
+      alert("Bien");
+      break;
+    case calificacion === 8 || calificacion === 9:
+      alert("Notable");
+      break;
+    case calificacion === 10:
+      alert("Sobresaliente");
+      break;
+    case calificacion < 0 || calificacion > 10:
+      mensajePunto2.textContent = `Número Erróneo`;
+      break;
+    default:
+      mensajePunto2.textContent = `Introduce un número valido`;
+      break;
+  }
+}
+let punto2 = document.getElementById("btnPunto2");
+punto2.addEventListener("click", ejercicio2);
