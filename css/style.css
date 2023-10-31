@@ -1,7 +1,4 @@
-table{
-    border: 1px solid blue;
-}
-td{
-    border: 1px solid blue;
-    padding: 10px;
-}
+.scrol-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }

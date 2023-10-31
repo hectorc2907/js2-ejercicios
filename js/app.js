@@ -227,3 +227,18 @@ function ejercicio5() {
 }
 let punto5 = document.getElementById("btnPunto5");
 punto5.addEventListener("click", ejercicio5);
+
+function ejercicio6() {
+  let mensajePunto6 = document.getElementById("mensajePunto6");
+  let piramide = "";
+
+  for (let i = 1; i <= 30; i++) {
+    for (let j = 1; j <= i; j++) {
+      piramide += i;
+    }
+    piramide += "<br>";
+  }
+  mensajePunto6.innerHTML = piramide;
+}
+let punto6 = document.getElementById("btnPunto6");
+punto6.addEventListener("click", ejercicio6);
