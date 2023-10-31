@@ -73,3 +73,22 @@ function ejercicio3() {
 }
 let punto3 = document.getElementById("btnPunto3");
 punto3.addEventListener("click", ejercicio3);
+
+function ejercicio4() {
+  let mensajePunto4 = document.getElementById("mensajePunto4");
+  let sumaTotal = 0;
+
+  do {
+    let numero = parseInt(prompt("Ingrese el numero por favor"));
+    if (numero) {
+      sumaTotal = sumaTotal + numero;
+      continuar = confirm("¿Desea continuar ingresando datos?");
+    } else {
+      alert("El dato ingresado no es un numero");
+      continuar = true;
+    }
+  } while (continuar);
+  mensajePunto4.textContent = `La suma total es ${sumaTotal}`;
+}
+let punto4 = document.getElementById("btnPunto4");
+punto4.addEventListener("click", ejercicio4);
