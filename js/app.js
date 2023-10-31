@@ -3,7 +3,7 @@ function ejercicio1() {
   let edad = parseInt(prompt("Ingrese la Edad del Usuario: "));
 
   switch (true) {
-    case edad <= 18 && edad !== 1:
+    case edad <= 18 && edad !== 1 && edad > 0:
       mensajePunto1.textContent = `El usuario tiene ${edad} años no puede conducir`;
       break;
     case edad > 18:
@@ -11,6 +11,9 @@ function ejercicio1() {
       break;
     case edad === 1:
       mensajePunto1.textContent = `El usuario tiene ${edad} año no puede conducir`;
+      break;
+    case edad <= 0:
+      mensajePunto1.textContent = `Los numeros negativos y el 0 no son tomados en cuenta, pruebe una vez mas`;
       break;
     default:
       mensajePunto1.textContent = `La entrada no es valida, pruebe una vez mas`;
