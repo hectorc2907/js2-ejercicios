@@ -269,3 +269,30 @@ function ejercicio7(){
 }
 let punto7 = document.getElementById("btnPunto7");
 punto7.addEventListener("click", ejercicio7);
+
+function ejercicio8(){
+  let mensajePunto8 = document.getElementById("mensajePunto8");
+  let piramide = "";
+  let cantidad = 0;
+  let condicion = true;
+
+  do {
+    cantidad = parseInt(prompt("Ingrese el numero a calcular no mayor a 50"));
+    if(cantidad > 0 && cantidad <= 50){
+      condicion = false;
+    }else{
+      alert("El numero ingresado es incorrecto vuelva a intentar");
+      condicion = true;
+    }
+  } while (condicion);
+
+  for (let i = 1; i <= cantidad; i++) {
+    for (let j = 1; j <= i; j++) {
+      piramide += i;
+    }
+    piramide += "<br>";
+  }
+  mensajePunto8.innerHTML = piramide;
+}
+let punto8 = document.getElementById("btnPunto8");
+punto8.addEventListener("click", ejercicio8);
