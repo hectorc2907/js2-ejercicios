@@ -227,3 +227,45 @@ function ejercicio5() {
 }
 let punto5 = document.getElementById("btnPunto5");
 punto5.addEventListener("click", ejercicio5);
+
+function ejercicio6() {
+  let mensajePunto6 = document.getElementById("mensajePunto6");
+  let piramide = "";
+
+  for (let i = 1; i <= 30; i++) {
+    for (let j = 1; j <= i; j++) {
+      piramide += i;
+    }
+    piramide += "<br>";
+  }
+  mensajePunto6.innerHTML = piramide;
+}
+let punto6 = document.getElementById("btnPunto6");
+punto6.addEventListener("click", ejercicio6);
+
+function ejercicio7(){
+  let mensajePunto7 = document.getElementById("mensajePunto7");
+  let piramide = "";
+  let cantidad = 0;
+  let condicion = true;
+
+  do {
+    cantidad = parseInt(prompt("Ingrese el numero a calcular no mayor a 50"));
+    if(cantidad > 0 && cantidad <= 50){
+      condicion = false;
+    }else{
+      alert("El numero ingresado es incorrecto vuelva a intentar");
+      condicion = true;
+    }
+  } while (condicion);
+
+  for (let i = cantidad; i >= 1; i--) {
+    for (let j = 1; j <= i; j++) {
+      piramide += i;
+    }
+    piramide += "<br>";
+  }
+  mensajePunto7.innerHTML = piramide;
+}
+let punto7 = document.getElementById("btnPunto7");
+punto7.addEventListener("click", ejercicio7);
