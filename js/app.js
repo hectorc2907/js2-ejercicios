@@ -92,3 +92,138 @@ function ejercicio4() {
 }
 let punto4 = document.getElementById("btnPunto4");
 punto4.addEventListener("click", ejercicio4);
+
+function ejercicio5() {
+  let mensajePunto5 = document.getElementById("mensajePunto5");
+
+  do {
+    let numeroDNI = parseInt(prompt("Ingrese el Numero de DNI: "));
+    if (numeroDNI >= 0 && numeroDNI <= 99999999) {
+      let restante = numeroDNI % 23;
+      switch (restante) {
+        case 0:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra T`
+          );
+          break;
+        case 1:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra R`
+          );
+          break;
+        case 2:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra W`
+          );
+          break;
+        case 3:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra A`
+          );
+          break;
+        case 4:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra G`
+          );
+          break;
+        case 5:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra M`
+          );
+          break;
+        case 6:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra Y`
+          );
+          break;
+        case 7:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra F`
+          );
+          break;
+        case 8:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra P`
+          );
+          break;
+        case 9:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra D`
+          );
+          break;
+        case 10:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra X`
+          );
+          break;
+        case 11:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra B`
+          );
+          break;
+        case 12:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra N`
+          );
+          break;
+        case 13:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra J`
+          );
+          break;
+        case 14:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra Z`
+          );
+          break;
+        case 15:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra S`
+          );
+          break;
+        case 16:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra Q`
+          );
+          break;
+        case 17:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra V`
+          );
+          break;
+        case 18:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra H`
+          );
+          break;
+        case 19:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra L`
+          );
+          break;
+        case 20:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra C`
+          );
+          break;
+        case 21:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra K`
+          );
+          break;
+        case 22:
+          alert(
+            `El restante es ${restante} por lo que le corresponde la letra E`
+          );
+          break;
+      }
+      continuar = confirm("¿Desea ingresar otro DNI?");
+    } else {
+      alert("El dato ingresado no es valido, vuelva a probar");
+      continuar = true;
+    }
+  } while (continuar);
+  mensajePunto5.textContent = `Gracias por usar la función!!`;
+}
+let punto5 = document.getElementById("btnPunto5");
+punto5.addEventListener("click", ejercicio5);

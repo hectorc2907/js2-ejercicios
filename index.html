@@ -124,6 +124,51 @@
             </div>
           </div>
         </section>
+        <hr />
+        <section>
+          <div class="col-12">
+            <h3 class="py-2 text-center">Ejercicio 5</h3>
+            <p class="py-2 text-center">
+              Realizar una página con un script que calcule el valor de la letra
+              de un número de DNI (Documento nacional de identidad).
+            </p>
+            <p class="py-2 text-center">
+              El algoritmo para calcular la letra del dni es el siguiente :
+            </p>
+            <div class="d-flex justify-content-center">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  El número debe ser entre 0 y 99999999
+                </li>
+                <li class="list-group-item">
+                  Debemos calcular el resto de la división entera entre el
+                  número y el número 23.
+                </li>
+                <li class="list-group-item">
+                  Según el resultado, de 0 a 22, le corresponderá una letra de
+                  las siguientes: (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z,
+                  S, Q, V, H, L, C, K, E)
+                </li>
+                <li class="list-group-item">
+                  Si lo introducido no es un número deberá indicarse con un
+                  alert y volver a preguntar.
+                </li>
+                <li class="list-group-item">
+                  Deberá de repetirse el proceso hasta que el usuario pulse
+                  «cancelar».
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center py-2 mt-3">
+              <button class="btn btn-dark" id="btnPunto5">
+                Ejecutar Función
+              </button>
+            </div>
+            <div class="py-2 text-center">
+              <p id="mensajePunto5" class="fs-2"></p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <footer></footer>
