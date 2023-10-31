@@ -56,3 +56,39 @@ function ejercicio2() {
 }
 let punto2 = document.getElementById("btnPunto2");
 punto2.addEventListener("click", ejercicio2);
+
+function ejercicio3() {
+  let mensajePunto3 = document.getElementById("mensajePunto3");
+  let textoCompleto = "";
+
+  do {
+    let texto = prompt("Ingrese el texto: ");
+    textoCompleto += texto + " - ";
+    continuar = confirm("¿Desea Ingresar algo mas?");
+  } while (continuar);
+
+  textoCompleto = textoCompleto.slice(0, -3);
+  textoCompleto += ".";
+  mensajePunto3.textContent = `${textoCompleto}`;
+}
+let punto3 = document.getElementById("btnPunto3");
+punto3.addEventListener("click", ejercicio3);
+
+function ejercicio4() {
+  let mensajePunto4 = document.getElementById("mensajePunto4");
+  let sumaTotal = 0;
+
+  do {
+    let numero = parseInt(prompt("Ingrese el numero por favor"));
+    if (numero) {
+      sumaTotal = sumaTotal + numero;
+      continuar = confirm("¿Desea continuar ingresando datos?");
+    } else {
+      alert("El dato ingresado no es un numero");
+      continuar = true;
+    }
+  } while (continuar);
+  mensajePunto4.textContent = `La suma total es ${sumaTotal}`;
+}
+let punto4 = document.getElementById("btnPunto4");
+punto4.addEventListener("click", ejercicio4);
