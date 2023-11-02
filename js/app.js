@@ -296,3 +296,7 @@ function ejercicio8(){
 }
 let punto8 = document.getElementById("btnPunto8");
 punto8.addEventListener("click", ejercicio8);
+
+function ejercicio9(){
+  
+}
