@@ -322,3 +322,121 @@ function ejercicio9() {
 }
 let punto9 = document.getElementById("btnPunto9");
 punto9.addEventListener("click", ejercicio9);
+
+function ejercicio10() {
+  let mensajePunto10 = document.getElementById("mensajePunto10");
+  let filas = parseInt(prompt("Ingrese el numero de filas: "));
+  let columnas = parseInt(prompt("Ingrese el numero de columnas: "));
+  let cantidad = filas * columnas;
+  let tabla = "";
+
+  tabla += "<table>";
+  for (let i = 1; i <= filas; i++) {
+    tabla += "<tr>";
+    for (let j = 1; j <= columnas; j++) {
+      tabla += "<td>" + cantidad-- + "</td>";
+    }
+    tabla += "</tr>";
+  }
+  tabla += "</table>";
+  mensajePunto10.innerHTML = tabla;
+}
+let punto10 = document.getElementById("btnPunto10");
+punto10.addEventListener("click", ejercicio10);
+
+function ejercicio11() {
+  let mensajePunto11 = document.getElementById("mensajePunto11");
+  let edad1 = parseInt(prompt("Ingrese la edad de la primera persona: "));
+  let persona1 = prompt("Ingrese el nombre de la primera persona: ");
+  let edad2 = parseInt(prompt("Ingrese la edad de la segunda persona: "));
+  let persona2 = prompt("Ingrese el nombre de la segunda persona: ");
+  let edad3 = parseInt(prompt("Ingrese la edad de la tercera persona: "));
+  let persona3 = prompt("Ingrese el nombre de la tercera persona: ");
+  let mayor = Math.max(edad1, edad2, edad3);
+
+  if (mayor === edad1) {
+    mensajePunto11.textContent = `El mayor es ${persona1} con ${edad1} años.`;
+  } else if (mayor === edad2) {
+    mensajePunto11.textContent = `El mayor es ${persona2} con ${edad2} años.`;
+  } else if (mayor === edad3) {
+    mensajePunto11.textContent = `El mayor es ${persona3} con ${edad3} años.`;
+  } else {
+    mensajePunto11.textContent = `Error al ejecutar la función.`;
+  }
+}
+let punto11 = document.getElementById("btnPunto11");
+punto11.addEventListener("click", ejercicio11);
+
+function ejercicio12() {
+  let mensajePunto12 = document.getElementById("mensajePunto12");
+  let numero = parseInt(Math.random() * 100);
+  mensajePunto12.textContent = `${numero}`;
+}
+let punto12 = document.getElementById("btnPunto12");
+punto12.addEventListener("click", ejercicio12);
+
+function ejercicio13() {
+  let mensajePunto13 = document.getElementById("mensajePunto13");
+  let texto = prompt("Ingrese el texto a mostrar: ");
+  let mayusculas = texto.toUpperCase();
+  mensajePunto13.textContent = `${mayusculas}`;
+}
+let punto13 = document.getElementById("btnPunto13");
+punto13.addEventListener("click", ejercicio13);
+
+function ejercicio14() {
+  let mensajePunto14 = document.getElementById("mensajePunto14");
+  let frase = prompt("Ingrese la cadena de texto: ");
+  let nuevaFrase = "";
+
+  for (let i = 0; i < frase.length; i++) {
+    if (i === frase.length - 1) {
+      nuevaFrase += frase.charAt(i);
+    } else {
+      nuevaFrase += frase.charAt(i) + "-";
+    }
+  }
+  mensajePunto14.textContent = `${nuevaFrase}`;
+}
+let punto14 = document.getElementById("btnPunto14");
+punto14.addEventListener("click", ejercicio14);
+
+function ejercicio15() {
+  let mensajePunto15 = document.getElementById("mensajePunto15");
+  let frase = prompt("Ingrese la cadena de texto: ");
+  let cantidadVocales = 0;
+
+  for (let i = 0; i < frase.length; i++) {
+    let letra = frase.charAt(i);
+    if (
+      letra === "a" ||
+      letra === "A" ||
+      letra === "e" ||
+      letra === "E" ||
+      letra === "i" ||
+      letra === "I" ||
+      letra === "o" ||
+      letra === "O" ||
+      letra === "u" ||
+      letra === "U"
+    ) {
+      cantidadVocales++;
+    }
+  }
+  mensajePunto15.textContent = `La frase "${frase}" tiene ${cantidadVocales} vocales`;
+}
+let punto15 = document.getElementById("btnPunto15");
+punto15.addEventListener("click", ejercicio15);
+
+function ejercicio16() {
+  let mensajePunto16 = document.getElementById("mensajePunto16");
+  let frase = prompt("Ingrese la cadena de texto: ");
+  let nuevaFrase = "";
+
+  for (let i = frase.length - 1; i >= 0; i--) {
+    nuevaFrase += frase.charAt(i);
+  }
+  mensajePunto16.textContent = `${nuevaFrase}`
+}
+let punto16 = document.getElementById("btnPunto16");
+punto16.addEventListener("click", ejercicio16);
