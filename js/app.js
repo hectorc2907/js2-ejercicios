@@ -409,16 +409,16 @@ function ejercicio15() {
   for (let i = 0; i < frase.length; i++) {
     let letra = frase.charAt(i);
     if (
-      letra === 'a' ||
-      letra === 'A' ||
-      letra === 'e' ||
-      letra === 'E' ||
-      letra === 'i' ||
-      letra === 'I' ||
-      letra === 'o' ||
-      letra === 'O' ||
-      letra === 'u' ||
-      letra === 'U'
+      letra === "a" ||
+      letra === "A" ||
+      letra === "e" ||
+      letra === "E" ||
+      letra === "i" ||
+      letra === "I" ||
+      letra === "o" ||
+      letra === "O" ||
+      letra === "u" ||
+      letra === "U"
     ) {
       cantidadVocales++;
     }
@@ -427,3 +427,16 @@ function ejercicio15() {
 }
 let punto15 = document.getElementById("btnPunto15");
 punto15.addEventListener("click", ejercicio15);
+
+function ejercicio16() {
+  let mensajePunto16 = document.getElementById("mensajePunto16");
+  let frase = prompt("Ingrese la cadena de texto: ");
+  let nuevaFrase = "";
+
+  for (let i = frase.length - 1; i >= 0; i--) {
+    nuevaFrase += frase.charAt(i);
+  }
+  mensajePunto16.textContent = `${nuevaFrase}`
+}
+let punto16 = document.getElementById("btnPunto16");
+punto16.addEventListener("click", ejercicio16);
