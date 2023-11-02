@@ -366,3 +366,11 @@ function ejercicio11() {
 }
 let punto11 = document.getElementById("btnPunto11");
 punto11.addEventListener("click", ejercicio11);
+
+function ejercicio12(){
+  let mensajePunto12 = document.getElementById("mensajePunto12");
+  let numero = parseInt(Math.random()*100);
+  mensajePunto12.textContent = `${numero}`
+}
+let punto12 = document.getElementById("btnPunto12");
+punto12.addEventListener("click", ejercicio12);
