@@ -324,7 +324,7 @@ let punto9 = document.getElementById("btnPunto9");
 punto9.addEventListener("click", ejercicio9);
 
 function ejercicio10() {
-  let mensajePunto110 = document.getElementById("mensajePunto10");
+  let mensajePunto10 = document.getElementById("mensajePunto10");
   let filas = parseInt(prompt("Ingrese el numero de filas: "));
   let columnas = parseInt(prompt("Ingrese el numero de columnas: "));
   let cantidad = filas * columnas;
@@ -339,7 +339,7 @@ function ejercicio10() {
     tabla += "</tr>";
   }
   tabla += "</table>";
-  mensajePunto110.innerHTML = tabla;
+  mensajePunto10.innerHTML = tabla;
 }
 let punto10 = document.getElementById("btnPunto10");
 punto10.addEventListener("click", ejercicio10);
@@ -367,10 +367,19 @@ function ejercicio11() {
 let punto11 = document.getElementById("btnPunto11");
 punto11.addEventListener("click", ejercicio11);
 
-function ejercicio12(){
+function ejercicio12() {
   let mensajePunto12 = document.getElementById("mensajePunto12");
-  let numero = parseInt(Math.random()*100);
-  mensajePunto12.textContent = `${numero}`
+  let numero = parseInt(Math.random() * 100);
+  mensajePunto12.textContent = `${numero}`;
 }
 let punto12 = document.getElementById("btnPunto12");
 punto12.addEventListener("click", ejercicio12);
+
+function ejercicio13() {
+  let mensajePunto13 = document.getElementById("mensajePunto13")
+  let texto = prompt("Ingrese el texto a mostrar: ");
+  let mayusculas = texto.toUpperCase();
+  mensajePunto13.textContent = `${mayusculas}`
+}
+let punto13 = document.getElementById("btnPunto13");
+punto13.addEventListener("click", ejercicio13);
