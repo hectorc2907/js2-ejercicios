@@ -243,7 +243,7 @@ function ejercicio6() {
 let punto6 = document.getElementById("btnPunto6");
 punto6.addEventListener("click", ejercicio6);
 
-function ejercicio7(){
+function ejercicio7() {
   let mensajePunto7 = document.getElementById("mensajePunto7");
   let piramide = "";
   let cantidad = 0;
@@ -251,9 +251,9 @@ function ejercicio7(){
 
   do {
     cantidad = parseInt(prompt("Ingrese el numero a calcular no mayor a 50"));
-    if(cantidad > 0 && cantidad <= 50){
+    if (cantidad > 0 && cantidad <= 50) {
       condicion = false;
-    }else{
+    } else {
       alert("El numero ingresado es incorrecto vuelva a intentar");
       condicion = true;
     }
@@ -270,7 +270,7 @@ function ejercicio7(){
 let punto7 = document.getElementById("btnPunto7");
 punto7.addEventListener("click", ejercicio7);
 
-function ejercicio8(){
+function ejercicio8() {
   let mensajePunto8 = document.getElementById("mensajePunto8");
   let piramide = "";
   let cantidad = 0;
@@ -278,9 +278,9 @@ function ejercicio8(){
 
   do {
     cantidad = parseInt(prompt("Ingrese el numero a calcular no mayor a 50"));
-    if(cantidad > 0 && cantidad <= 50){
+    if (cantidad > 0 && cantidad <= 50) {
       condicion = false;
-    }else{
+    } else {
       alert("El numero ingresado es incorrecto vuelva a intentar");
       condicion = true;
     }
@@ -297,6 +297,28 @@ function ejercicio8(){
 let punto8 = document.getElementById("btnPunto8");
 punto8.addEventListener("click", ejercicio8);
 
-function ejercicio9(){
-  
+function ejercicio9() {
+  let mensajePunto9 = document.getElementById("mensajePunto9");
+  let numeros = "";
+  for (let i = 1; i <= 500; i++) {
+    numeros += i + " - ";
+    if (i % 4 === 0 && i % 9 === 0) {
+      numeros += "Multiplo de 4 y 9";
+    } else {
+      if (i % 4 === 0) {
+        numeros += "Multiplo de 4";
+      } else {
+        if (i % 9 === 0) {
+          numeros += "Multiplo de 9";
+        }
+      }
+    }
+    if (i % 5 === 0) {
+      numeros += "<hr>";
+    }
+    numeros += "<br>";
+  }
+  mensajePunto9.innerHTML = numeros;
 }
+let punto9 = document.getElementById("btnPunto9");
+punto9.addEventListener("click", ejercicio9);
