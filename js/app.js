@@ -376,10 +376,27 @@ let punto12 = document.getElementById("btnPunto12");
 punto12.addEventListener("click", ejercicio12);
 
 function ejercicio13() {
-  let mensajePunto13 = document.getElementById("mensajePunto13")
+  let mensajePunto13 = document.getElementById("mensajePunto13");
   let texto = prompt("Ingrese el texto a mostrar: ");
   let mayusculas = texto.toUpperCase();
-  mensajePunto13.textContent = `${mayusculas}`
+  mensajePunto13.textContent = `${mayusculas}`;
 }
 let punto13 = document.getElementById("btnPunto13");
 punto13.addEventListener("click", ejercicio13);
+
+function ejercicio14() {
+  let mensajePunto14 = document.getElementById("mensajePunto14");
+  let frase = prompt("Ingrese la cadena de texto: ");
+  let nuevaFrase = "";
+
+  for (let i = 0; i < frase.length; i++) {
+    if (i === frase.length - 1) {
+      nuevaFrase += frase.charAt(i);
+    } else {
+      nuevaFrase += frase.charAt(i) + "-";
+    }
+  }
+  mensajePunto14.textContent = `${nuevaFrase}`;
+}
+let punto14 = document.getElementById("btnPunto14");
+punto14.addEventListener("click", ejercicio14);
