@@ -400,3 +400,30 @@ function ejercicio14() {
 }
 let punto14 = document.getElementById("btnPunto14");
 punto14.addEventListener("click", ejercicio14);
+
+function ejercicio15() {
+  let mensajePunto15 = document.getElementById("mensajePunto15");
+  let frase = prompt("Ingrese la cadena de texto: ");
+  let cantidadVocales = 0;
+
+  for (let i = 0; i < frase.length; i++) {
+    let letra = frase.charAt(i);
+    if (
+      letra === 'a' ||
+      letra === 'A' ||
+      letra === 'e' ||
+      letra === 'E' ||
+      letra === 'i' ||
+      letra === 'I' ||
+      letra === 'o' ||
+      letra === 'O' ||
+      letra === 'u' ||
+      letra === 'U'
+    ) {
+      cantidadVocales++;
+    }
+  }
+  mensajePunto15.textContent = `La frase "${frase}" tiene ${cantidadVocales} vocales`;
+}
+let punto15 = document.getElementById("btnPunto15");
+punto15.addEventListener("click", ejercicio15);
