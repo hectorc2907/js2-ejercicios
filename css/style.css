@@ -1,4 +1,11 @@
 .scroll-container {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
+  overflow-x: auto;
+  white-space: nowrap;
+}
+table {
+  border: 1px solid black;
+}
+td {
+  border: 1px solid black;
+  padding: 10px;
+}

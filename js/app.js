@@ -322,3 +322,47 @@ function ejercicio9() {
 }
 let punto9 = document.getElementById("btnPunto9");
 punto9.addEventListener("click", ejercicio9);
+
+function ejercicio10() {
+  let mensajePunto110 = document.getElementById("mensajePunto10");
+  let filas = parseInt(prompt("Ingrese el numero de filas: "));
+  let columnas = parseInt(prompt("Ingrese el numero de columnas: "));
+  let cantidad = filas * columnas;
+  let tabla = "";
+
+  tabla += "<table>";
+  for (let i = 1; i <= filas; i++) {
+    tabla += "<tr>";
+    for (let j = 1; j <= columnas; j++) {
+      tabla += "<td>" + cantidad-- + "</td>";
+    }
+    tabla += "</tr>";
+  }
+  tabla += "</table>";
+  mensajePunto110.innerHTML = tabla;
+}
+let punto10 = document.getElementById("btnPunto10");
+punto10.addEventListener("click", ejercicio10);
+
+function ejercicio11() {
+  let mensajePunto11 = document.getElementById("mensajePunto11");
+  let edad1 = parseInt(prompt("Ingrese la edad de la primera persona: "));
+  let persona1 = prompt("Ingrese el nombre de la primera persona: ");
+  let edad2 = parseInt(prompt("Ingrese la edad de la segunda persona: "));
+  let persona2 = prompt("Ingrese el nombre de la segunda persona: ");
+  let edad3 = parseInt(prompt("Ingrese la edad de la tercera persona: "));
+  let persona3 = prompt("Ingrese el nombre de la tercera persona: ");
+  let mayor = Math.max(edad1, edad2, edad3);
+
+  if (mayor === edad1) {
+    mensajePunto11.textContent = `El mayor es ${persona1} con ${edad1} años.`;
+  } else if (mayor === edad2) {
+    mensajePunto11.textContent = `El mayor es ${persona2} con ${edad2} años.`;
+  } else if (mayor === edad3) {
+    mensajePunto11.textContent = `El mayor es ${persona3} con ${edad3} años.`;
+  } else {
+    mensajePunto11.textContent = `Error al ejecutar la función.`;
+  }
+}
+let punto11 = document.getElementById("btnPunto11");
+punto11.addEventListener("click", ejercicio11);
