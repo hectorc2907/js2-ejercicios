@@ -436,7 +436,35 @@ function ejercicio16() {
   for (let i = frase.length - 1; i >= 0; i--) {
     nuevaFrase += frase.charAt(i);
   }
-  mensajePunto16.textContent = `${nuevaFrase}`
+  mensajePunto16.textContent = `${nuevaFrase}`;
 }
 let punto16 = document.getElementById("btnPunto16");
 punto16.addEventListener("click", ejercicio16);
+
+function ejercicio17() {
+  let mensajePunto17 = document.getElementById("mensajePunto17");
+  let frase = prompt("Ingrese la cadena de texto: ");
+  let ubicacion = 0;
+
+  for (let i = 0; i < frase.length; i++) {
+    let letra = frase.charAt(i);
+    if (
+      letra === "a" ||
+      letra === "A" ||
+      letra === "e" ||
+      letra === "E" ||
+      letra === "i" ||
+      letra === "I" ||
+      letra === "o" ||
+      letra === "O" ||
+      letra === "u" ||
+      letra === "U"
+    ) {
+      ubicacion = i + 1;
+      break;
+    }
+  }
+  mensajePunto17.textContent = `La ubicacion de la primera vocal es la numero ${ubicacion}`;
+}
+let punto17 = document.getElementById("btnPunto17");
+punto17.addEventListener("click", ejercicio17);
